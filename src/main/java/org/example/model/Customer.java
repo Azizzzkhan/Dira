@@ -8,6 +8,8 @@ public class Customer {
     private String address; //Адрес
     private List<Product> basket; //Корзина
 
+    private double basketPrice;
+
     public Customer(String nameOfOrganization, String numberPhone, String address, List<Product> basket) {
         this.nameOfOrganization = nameOfOrganization;
         this.numberPhone = numberPhone;
@@ -47,6 +49,14 @@ public class Customer {
         this.basket = basket;
     }
 
+    public double getBasketPrice() {
+        return basketPrice;
+    }
+
+    public void setBasketPrice(double basketPrice) {
+        this.basketPrice = basketPrice;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -54,5 +64,13 @@ public class Customer {
                 ", numberPhone='" + numberPhone + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+
+
+
+
+    public void addProductInBasket(Product product){
+        basket.add(product);
     }
 }

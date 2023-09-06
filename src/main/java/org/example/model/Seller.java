@@ -9,9 +9,6 @@ public class Seller {
     private String address; //Адрес
     private List<Product> assortment; //Ассортимент
 
-    public Seller() {
-
-    }
 
     public Seller(String nameOfOrganization, String numberPhone, String address, List<Product> assortment) {
         this.nameOfOrganization = nameOfOrganization;
@@ -25,14 +22,17 @@ public class Seller {
     }
 
     public void setNameOfOrganization(String nameOfOrganization) {
+
         this.nameOfOrganization = nameOfOrganization;
     }
 
     public String getNumberPhone() {
+
         return numberPhone;
     }
 
     public void setNumberPhone(String numberPhone) {
+
         this.numberPhone = numberPhone;
     }
 
@@ -77,6 +77,7 @@ public class Seller {
     }
 
     public List<Product> returnAllProductInAssortment() {
+
         return assortment;
     }
 
@@ -85,10 +86,12 @@ public class Seller {
     }
 
     public void updateNameOfProductById(int id, String newName) {
+
         assortment.get(id).setNameProduct(newName);
     }
 
     public void updateMeasureOfProductById(int id, String newMeasure) {
+
         assortment.get(id).setMeasure(newMeasure);
     }
 

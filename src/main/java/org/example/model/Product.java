@@ -8,7 +8,8 @@ public class Product {
     private double quantity; //Кол-во продукта
     private double price; //Цена продукта
 
-    public Product(String nameProduct, String measure, double quantity, double price) {
+    public Product(int id,String nameProduct, String measure, double quantity, double price) {
+        this.id = id;
         this.nameProduct = nameProduct;
         this.measure = measure;
         this.quantity = quantity;
@@ -58,7 +59,8 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "nameProduct='" + nameProduct + '\'' +
+                "id=" + id +
+                ", nameProduct='" + nameProduct + '\'' +
                 ", measure='" + measure + '\'' +
                 ", quantity=" + quantity +
                 ", price=" + price +
