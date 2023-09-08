@@ -1,4 +1,4 @@
-package org.example.conroller;
+package org.example.controller;
 
 import org.example.model.Customer;
 import org.example.model.Product;
@@ -23,6 +23,5 @@ public class ControllerSeller {
         }
         System.out.println(finalPrice);
         customer.setBasketPrice(finalPrice);
-
     }
 }

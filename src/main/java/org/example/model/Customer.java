@@ -7,14 +7,23 @@ public class Customer {
     private String numberPhone; //Номер телефона
     private String address; //Адрес
     private List<Product> basket; //Корзина
+    private double basketPrice; // Сумма покупки
+    private double cash; // Бюджет покупателя
 
-    private double basketPrice;
-
-    public Customer(String nameOfOrganization, String numberPhone, String address, List<Product> basket) {
+    public Customer(String nameOfOrganization, String numberPhone, String address, List<Product> basket,double cash) {
         this.nameOfOrganization = nameOfOrganization;
         this.numberPhone = numberPhone;
         this.address = address;
         this.basket = basket;
+        this.cash = cash;
+    }
+
+    public double getCash() {
+        return cash;
+    }
+
+    public void setCash(double cash) {
+        this.cash = cash;
     }
 
     public String getNameOfOrganization() {

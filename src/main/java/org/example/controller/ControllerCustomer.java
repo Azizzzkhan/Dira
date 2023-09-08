@@ -1,4 +1,4 @@
-package org.example.conroller;
+package org.example.controller;
 
 import org.example.model.Customer;
 import org.example.model.Product;
@@ -21,5 +21,9 @@ public class ControllerCustomer {
         Product product = seller.returnProductById(id);
         product.setQuantity(quantity);
         customer.addProductInBasket(product);
+    }
+    public void paymentBuy(){
+        customer.setCash(customer.getCash() - customer.getBasketPrice());
+        seller.setCash(seller.getCash() + customer.getBasketPrice());
     }
 }
