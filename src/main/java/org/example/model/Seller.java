@@ -8,16 +8,27 @@ public class Seller {
     private String numberPhone; //Номер телефона
     private String address; //Адрес
     private List<Product> assortment; //Ассортимент
+    private double cash; //Бюджет продавца
 
 
-    public Seller(String nameOfOrganization, String numberPhone, String address, List<Product> assortment) {
+    public Seller(String nameOfOrganization, String numberPhone, String address, List<Product> assortment,double check) {
         this.nameOfOrganization = nameOfOrganization;
         this.numberPhone = numberPhone;
         this.address = address;
         this.assortment = assortment;
+        this.cash = check;
+    }
+
+    public double getCash() {
+        return cash;
+    }
+
+    public void setCash(double cash) {
+        this.cash = cash;
     }
 
     public String getNameOfOrganization() {
+
         return nameOfOrganization;
     }
 
@@ -37,14 +48,17 @@ public class Seller {
     }
 
     public String getAddress() {
+
         return address;
     }
 
     public void setAddress(String address) {
+
         this.address = address;
     }
 
     public List<Product> getAssortment() {
+
         return assortment;
     }
 

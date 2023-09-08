@@ -1,5 +1,7 @@
 package org.example.model;
 
+import org.example.enumeration.CategoryOfProduct;
+
 public class Product {
 
     private int id;
@@ -8,12 +10,15 @@ public class Product {
     private double quantity; //Кол-во продукта
     private double price; //Цена продукта
 
-    public Product(int id,String nameProduct, String measure, double quantity, double price) {
+    private CategoryOfProduct categoryOfProduct;
+
+    public Product(int id, String nameProduct, String measure, double quantity, double price, CategoryOfProduct categoryOfProduct) {
         this.id = id;
         this.nameProduct = nameProduct;
         this.measure = measure;
         this.quantity = quantity;
         this.price = price;
+        this.categoryOfProduct = categoryOfProduct;
     }
 
     public int getId() {
@@ -56,6 +61,14 @@ public class Product {
         this.price = price;
     }
 
+    public CategoryOfProduct getCategoryOfProduct() {
+        return categoryOfProduct;
+    }
+
+    public void setCategoryOfProduct(CategoryOfProduct categoryOfProduct) {
+        this.categoryOfProduct = categoryOfProduct;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -64,6 +77,7 @@ public class Product {
                 ", measure='" + measure + '\'' +
                 ", quantity=" + quantity +
                 ", price=" + price +
+                ", categoryOfProduct=" + categoryOfProduct +
                 '}';
     }
 }
