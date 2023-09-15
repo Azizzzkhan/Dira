@@ -28,12 +28,14 @@ public class Main {
         ControllerSeller controllerSeller = new ControllerSeller(seller, customer);
         System.out.println("Бюджет покупателя до: " + customer.getCash());
         System.out.println("Бюджет продавца до: " + seller.getCash());
+
         controllerCustomer.viewAssortment();
         controllerCustomer.choiceProduct(1,4.0);
         controllerCustomer.choiceProduct(2,2.0);
         controllerSeller.invoicing();
         controllerCustomer.paymentBuy();
         System.out.println(customer.getBasketPrice());
+
         System.out.println("Бюджет покупателя после: " + customer.getCash());
         System.out.println("Бюджет продавца после: " + seller.getCash());
 
@@ -42,3 +44,4 @@ public class Main {
 // Проблема с id не совпадают 🗸
 // Взаимосвязь количества товаров у покупателя и продавца🗸
 // Указали категории товаров 🗸
+//Новый функционал
